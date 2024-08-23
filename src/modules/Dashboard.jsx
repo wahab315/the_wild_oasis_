@@ -1,6 +1,6 @@
 import React from "react";
-import Row from "../components/feature/Row";
-import Heading from "../components/feature/Heading";
+import Row from "../components/common/Row";
+import Heading from "../components/common/Heading";
 import DashboardFilter from "../components/ui/Dashboard/DashboardFilter";
 
 const Dashboard = () => {

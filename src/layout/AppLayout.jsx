@@ -1,5 +1,5 @@
 import React from "react";
-import { AppLayoutStyle } from "../styles/layout";
+import { AppLayoutStyle, Main, Container } from "../styles/layout";
 import Sidebar from "../components/common/sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
 
@@ -8,9 +8,11 @@ const AppLayout = () => {
     <>
       <AppLayoutStyle>
         <Sidebar />
-        <div>
-          <Outlet />
-        </div>
+        <Main>
+          <Container>
+            <Outlet />
+          </Container>
+        </Main>
       </AppLayoutStyle>
     </>
   );

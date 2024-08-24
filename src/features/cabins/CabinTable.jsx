@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import Spinner from "../../components/common/Spinner";
 import CabinRow from "./CabinRow";
 
+
 const Table = styled.div`
   border: 1px solid var(--color-grey-200);
 
@@ -34,7 +35,7 @@ const CabinTable = () => {
     data: cabins,
     error,
   } = useQuery({
-    queryKey: ["cabin"],
+    queryKey: ["cabins"],
     queryFn: getCabins,
   });
 

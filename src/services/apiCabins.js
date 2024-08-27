@@ -1,5 +1,7 @@
 import supabase from "./supabase";
 
+
+// For Getting Data
 export async function getCabins() {
   const { data, error } = await supabase.from("cabins").select("*");
 
@@ -9,6 +11,7 @@ export async function getCabins() {
   return data;
 }
 
+// For Creating new cabin
 export async function createCabin(newCabin) {
   const { data, error } = await supabase
     .from("cabins")
@@ -21,6 +24,7 @@ export async function createCabin(newCabin) {
   return data;
 }
 
+//  for deleting cabin 
 export async function deleteCabins(id) {
   const { data, error } = await supabase.from("cabins").delete().eq("id", id);
   if (error) {
